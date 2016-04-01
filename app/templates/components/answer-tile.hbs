@@ -1,0 +1,7 @@
+<ul>
+  {{#each answers as |answer|}}
+    <li>{{answer.author}} said "{{answer.text}}"</li>
+    <button {{action 'delete' answer}}>Delete Answer</button>
+    {{update-answer answer=answer update="update"}}
+  {{/each}}
+</ul>
