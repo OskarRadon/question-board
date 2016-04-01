@@ -1,0 +1,10 @@
+{{#if showAnswerUpdate}}
+  <form>
+    <label for="text">Answer</label>
+    {{input value=text id="text" placeholder=answer.text}}
+
+    <button {{action 'update' answer}}>Save Answer</button>
+  </form>
+{{else}}
+    <button {{action 'showAnswerUpdate'}}>Update Answer</button>
+{{/if}}
