@@ -1,1 +1,6 @@
-{{outlet}}
+<h3>Questions:</h3>
+<ul>
+  {{#each model as |question|}}
+  <li>{{question.author}} asked: {{#link-to 'question' question.id}}"{{question.text}}"{{/link-to}}</li>
+  {{/each}}
+</ul>
