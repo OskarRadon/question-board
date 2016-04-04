@@ -1,6 +1,8 @@
 <h4>{{model.author}} asked:</h4>
 <h3>"{{model.text}}"</h3>
 
-<h2>Answers:</h2>
 {{new-answer question=model saveAnswer="saveAnswer"}}
+
+<h2>Answers:</h2>
+
 {{answer-tile answers=model.answers destroyAnswer="destroyAnswer" update="update"}}
