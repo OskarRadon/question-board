@@ -12,6 +12,8 @@ export default Ember.Component.extend({
         author: this.get('author')
       };
       this.set('showQuestionForm', false);
+      this.set('text', "");
+      this.set('author', "");
       this.sendAction('saveQuestion', params);
     }
   }

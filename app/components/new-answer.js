@@ -14,6 +14,8 @@ export default Ember.Component.extend({
         question: this.get('question')
       };
       this.set('showAnswerForm', false);
+      this.set('text', "");
+      this.set('author', "");
       this.sendAction('saveAnswer', params);
     }
   }
