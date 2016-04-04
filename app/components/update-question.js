@@ -6,6 +6,9 @@ export default Ember.Component.extend({
     showQuestionUpdate() {
       this.set('showQuestionUpdate', true);
     },
+    hideQuestionUpdate() {
+      this.set('showQuestionUpdate', false);
+    },
     update(question) {
       var params = {
         text: this.get('text'),

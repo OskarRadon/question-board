@@ -6,7 +6,9 @@ export default Ember.Component.extend({
     showAnswerForm() {
       this.set('showAnswerForm', true);
     },
-
+    hideAnswerForm() {
+      this.set('showAnswerForm', false);
+    },
     saveAnswer() {
       var params = {
         author: this.get('author'),

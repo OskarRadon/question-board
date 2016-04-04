@@ -4,7 +4,8 @@
     {{input value=text id="text" placeholder=answer.text}}
 
     <button {{action 'update' answer}}>Save Answer</button>
+    <button {{action 'hideAnswerUpdate'}}>Cancel</button>
   </form>
 {{else}}
-    <button {{action 'showAnswerUpdate'}}>Update Answer</button>
+  <button {{action 'showAnswerUpdate'}}>Update Answer</button>
 {{/if}}
