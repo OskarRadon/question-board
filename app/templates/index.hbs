@@ -6,5 +6,11 @@
   <li>{{question.author}} asked: {{#link-to 'question' question.id}}"{{question.text}}"{{/link-to}}</li>
   {{update-question question=question update="update"}}
   <button {{action 'delete' question}}>Delete This Question</button>
+  <button {{action 'favorite' question}}>Favorite</button>
+
   {{/each}}
 </ul>
+
+
+{{display-favorites question=model}}
+<!-- not working for some inexplicable reason -->

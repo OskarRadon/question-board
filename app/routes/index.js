@@ -4,6 +4,7 @@ export default Ember.Route.extend({
   model() {
     return this.store.findAll('question');
   },
+  favorites: Ember.inject.service(),
   actions: {
     saveQuestion(params) {
       var newQuestion = this.store.createRecord('question', params);
@@ -24,6 +25,9 @@ export default Ember.Route.extend({
       });
       question.save();
       this.transitionTo('index');
+    },
+    favorite(question) {
+      this.get('favorites').add(question);
     }
   }
 });
