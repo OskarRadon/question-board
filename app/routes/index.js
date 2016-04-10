@@ -4,19 +4,18 @@ export default Ember.Route.extend({
   model() {
     return this.store.findAll('question');
   },
-  favorites: Ember.inject.service(),
   actions: {
     saveQuestion(params) {
       var newQuestion = this.store.createRecord('question', params);
       newQuestion.save();
       this.transitionTo('index');
     },
-    delete(comment) {
-      if (confirm('Are you sure you want to delete this question?')) {
-        comment.destroyRecord();
-        this.transitionTo('index');
-      }
-    },
+    // delete(comment) {
+    //   if (confirm('Are you sure you want to delete this question?')) {
+    //     comment.destroyRecord();
+    //     this.transitionTo('index');
+    //   }
+    // },
     update(question, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
@@ -25,10 +24,6 @@ export default Ember.Route.extend({
       });
       question.save();
       this.transitionTo('index');
-    },
-    favorite(question) {
-      this.get('favorites').add(question);
-      console.log(question);  // does not log anything
     }
   }
 });

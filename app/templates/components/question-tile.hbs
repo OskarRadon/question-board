@@ -1,0 +1,7 @@
+<li>
+  {{question.author}} asked: {{#link-to 'question' question.id}}"{{question.text}}"{{/link-to}}
+  {{question-popularity question.answers}}
+</li>
+<!-- {{update-question question=question update="update"}} -->
+<!-- <button {{action 'delete' question}}>Delete This Question</button> -->
+<button {{action 'favorite' question}}>Favorite</button>
