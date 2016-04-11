@@ -2,6 +2,7 @@
 <h3>"{{question.text}}"</h3>
 <button {{action 'addToFavorites' question}}>Favorite</button>
 {{new-answer question=model saveAnswer="saveAnswer"}}
+<!-- not working? -->
 
 <h2>Answers:</h2>
 {{#each question.answers as |answer|}}

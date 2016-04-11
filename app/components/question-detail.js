@@ -16,7 +16,6 @@ export default Ember.Component.extend({
       this.sendAction('updateQuestion', question, formInputs);
     },
     saveAnswer(formInputs) {
-      console.log(formInputs, "save answer console");
       this.sendAction('saveAnswer', formInputs);
     }
 });
