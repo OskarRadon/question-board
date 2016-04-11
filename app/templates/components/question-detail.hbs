@@ -1,7 +1,7 @@
 <h4>{{question.author}} asked:</h4>
 <h3>"{{question.text}}"</h3>
 <button {{action 'addToFavorites' question}}>Favorite</button>
-{{new-answer question=model saveAnswer="saveAnswer"}}
+{{new-answer question=question saveAnswer="saveAnswer"}}
 <!-- not working? -->
 
 <h2>Answers:</h2>

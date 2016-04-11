@@ -5,7 +5,6 @@ export default Ember.Component.extend({
   actions: {
     addToFavorites(question){
       this.get('favorites').add(question);
-      this.set('itemFavorited', true);
     },
     delete(question) {
       if (confirm('Are you sure you want to delete this question?')) {
@@ -18,4 +17,5 @@ export default Ember.Component.extend({
     saveAnswer(formInputs) {
       this.sendAction('saveAnswer', formInputs);
     }
+  }
 });
