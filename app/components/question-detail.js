@@ -18,5 +18,4 @@ export default Ember.Component.extend({
     saveAnswer(formInputs) {
       this.sendAction('saveAnswer', formInputs);
     }
-  }
 });
