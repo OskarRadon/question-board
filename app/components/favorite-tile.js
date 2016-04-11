@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  favoriteAnswers: Ember.inject.service(),
+  favorites: Ember.inject.service('favorites'),
   actions: {
-    addToFavorites(item) {
-      this.get('favoriteAnswers').add(item);
+    addToFavorites(question) {
+      this.get('favorites').add(question);
     }
   }
 });
