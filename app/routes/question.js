@@ -14,17 +14,17 @@ export default Ember.Route.extend({
       });
       this.transitionTo('question');
     },
-    destroyAnswer(answer) {
-      answer.destroyRecord();
-      this.transitionTo('question');
+    destroyQuestion(question) {
+      question.destroyRecord();
+      this.transitionTo('index');
     },
-    update(answer, params) {
+    update(question, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
-          answer.set(key,params[key]);
+          question.set(key,params[key]);
         }
       });
-      answer.save();
+      question.save();
       this.transitionTo('question');
     }
   }

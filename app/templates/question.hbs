@@ -1,9 +1,1 @@
-<h4>{{model.author}} asked:</h4>
-<h3>"{{model.text}}"</h3>
-
-{{new-answer question=model saveAnswer="saveAnswer"}}
-
-<h2>Answers:</h2>
-{{#each question.answers as |answer|}}
-{{answer-tile answer=model destroyAnswer="destroyAnswer" update="update"}}
-{{/each}}
+{{question-detail question=model update="update" saveAnswer="saveAnswer" destroyQuestion="destroyQuestion"}}

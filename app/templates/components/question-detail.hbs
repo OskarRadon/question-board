@@ -1,1 +1,10 @@
-{{yield}}
+<h4>{{question.author}} asked:</h4>
+<h3>"{{question.text}}"</h3>
+<button {{action 'addToFavorites' question}}>Favorite</button>
+{{new-answer question=model saveAnswer="saveAnswer"}}
+
+<h2>Answers:</h2>
+{{#each question.answers as |answer|}}
+  {{answer-tile answer=answer}}
+{{/each}}
+<!-- destroyAnswer="destroyAnswer" update="update" -->

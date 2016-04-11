@@ -1,8 +1,4 @@
-<ul>
-  {{#each answers as |answer|}}
-    <li>{{answer.author}} said "{{answer.text}}"</li>
-    <button {{action 'delete' answer}}>Delete Answer</button>
+{{answer.author}} said "{{answer.text}}"
+    <!-- <button {{action 'delete' answer}}>Delete Answer</button>
     {{update-answer answer=answer update="update"}}
-    <button {{action 'addToFavorites' answer}}>Favorite!</button>
-  {{/each}}
-</ul>
+    <button {{action 'addToFavorites' answer}}>Favorite!</button> -->
