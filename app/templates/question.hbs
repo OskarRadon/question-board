@@ -4,5 +4,6 @@
 {{new-answer question=model saveAnswer="saveAnswer"}}
 
 <h2>Answers:</h2>
-
-{{answer-tile answers=model.answers destroyAnswer="destroyAnswer" update="update"}}
+{{#each question.answers as |answer|}}
+{{answer-tile answer=model destroyAnswer="destroyAnswer" update="update"}}
+{{/each}}

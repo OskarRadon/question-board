@@ -4,7 +4,6 @@ export default Ember.Component.extend({
   favoriteAnswers: Ember.inject.service(),
   actions: {
     addToFavorites(answer) {
-      this.set('bestAnswer', true);
       this.get('favoriteAnswers').add(answer);
       this.sendAction('addToFavorites', answer);
     },
