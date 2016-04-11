@@ -3,10 +3,6 @@
 <h3>Questions:</h3>
 <ul>
   {{#each model as |question|}}
-    {{question-tile question=model}}
+    {{question-tile question=question}}
   {{/each}}
 </ul>
-
-
-{{display-favorites}}
-<!-- not working :( -->
