@@ -18,12 +18,10 @@ export default Ember.Route.extend({
       });
       question.save();
       this.transitionTo('index');
-<<<<<<< HEAD
-=======
     },
     favorite(question) {
       this.get('favorites').add(question);
->>>>>>> parent of d4a1ce8... Still fiddling with it trying to make it work :/
+  
     }
   }
 });
